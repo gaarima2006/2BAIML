@@ -7,10 +7,19 @@
     <script>
         function sum()
         {
-            let age=parseInt(prompt("enter value of a"))
+            let age=parseInt(prompt("enter value of a"));
+           
+
             if(age>=18)
         {
-            alert("you are eligible for voating")
+            let c=confirm("do you want to submit your response");
+             if(c)
+            {
+                alert("your response is submitted");
+            }
+            else{
+                alert("Thank You!")
+            }
         }
         else{
             alert("You are not eligible")
