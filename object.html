@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+
+<h2>Array Methods Result</h2>
+<div id="result"></div>
+
+<script>
+    let arr = [1, 2, 3];
+    let output = "";
+
+    arr.push(4);
+    output += "After push: " + arr + "<br>";
+
+    arr.pop();
+    output += "After pop: " + arr + "<br>";
+
+    arr.unshift(0);
+    output += "After unshift: " + arr + "<br>";
+
+    arr.shift();
+    output += "After shift: " + arr + "<br>";
+
+    let newArr = arr.slice(0, 2);
+    output += "After slice(0,2): " + newArr + "<br>";
+
+    document.getElementById("result").innerHTML = output;
+</script>
+
+</body>
+</html>
