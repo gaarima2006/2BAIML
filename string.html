@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String Functions</title>
+</head>
+<body>
+
+    <h1>JavaScript String Functions</h1>
+
+    <p id="output"></p>
+
+    <script>
+        // Create a string
+        let str = "Hello JavaScript";
+
+        // String functions
+        let result = "";
+
+        result += "Original String: " + str + "<br>";
+        result += "Length: " + str.length + "<br>";
+        result += "Uppercase: " + str.toUpperCase() + "<br>";
+        result += "Lowercase: " + str.toLowerCase() + "<br>";
+        result += "Character at index 1: " + str.charAt(1) + "<br>";
+        result += "Slice (0, 5): " + str.slice(0, 5) + "<br>";
+        result += "Substring (6, 16): " + str.substring(6, 16) + "<br>";
+        result += "Replace: " + str.replace("JavaScript", "World") + "<br>";
+        result += "Includes 'JavaScript': " + str.includes("JavaScript") + "<br>";
+        result += "Concatenation: " + str.concat(" Programming") + "<br>";
+
+        // Display result
+        document.getElementById("output").innerHTML = result;
+    </script>
+
+</body>
+</html>
