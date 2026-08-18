@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Math Functions</title>
+</head>
+<body>
+
+    <h1>JavaScript Math Functions</h1>
+
+    <p id="output"></p>
+
+    <script>
+        let num = 25;
+        let result = "";
+
+        result += "Number: " + num + "<br>";
+        result += "Square Root: " + Math.sqrt(num) + "<br>";
+        result += "Power (25²): " + Math.pow(num, 2) + "<br>";
+        result += "Absolute Value: " + Math.abs(-25) + "<br>";
+        result += "Round (4.6): " + Math.round(4.6) + "<br>";
+        result += "Floor (4.9): " + Math.floor(4.9) + "<br>";
+        result += "Ceil (4.1): " + Math.ceil(4.1) + "<br>";
+        result += "Maximum: " + Math.max(10, 25, 15, 40) + "<br>";
+        result += "Minimum: " + Math.min(10, 25, 15, 40) + "<br>";
+        result += "Random Number: " + Math.random() + "<br>";
+        result += "PI: " + Math.PI + "<br>";
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+
+</body>
+</html>
