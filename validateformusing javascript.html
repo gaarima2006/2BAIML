@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Registration Form</h2>
+
+        <form id="registrationForm">
+
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label>Mobile Number:</label>
+            <input type="text" id="mobile" placeholder="Enter mobile number">
+
+            <label>Email:</label>
+            <input type="text" id="email" placeholder="Enter email">
+
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <label>Re-enter Password:</label>
+            <input type="password" id="repassword" placeholder="Re-enter password">
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        document.getElementById("registrationForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            // Get values
+
+            let name = document.getElementById("name").value.trim();
+
+            let mobile = document.getElementById("mobile").value.trim();
+
+            let email = document.getElementById("email").value.trim();
+
+            let password = document.getElementById("password").value;
+
+            let repassword =
+                document.getElementById("repassword").value;
+
+
+            // NAME VALIDATION
+
+            // Only letters and spaces allowed
+            let namePattern = /^[A-Za-z ]+$/;
+
+            if (name === "") {
+
+                alert("Name cannot be empty!");
+
+                return;
+            }
+
+            if (!namePattern.test(name)) {
+
+                alert("Name should contain only letters!");
+
+                return;
+            }
+
+            if (name.length < 3) {
+
+                alert("Name must contain at least 3 characters!");
+
+                return;
+            }
+
+
+            // MOBILE NUMBER VALIDATION
+
+            // Only 10 numbers allowed
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if (mobile === "") {
+
+                alert("Mobile number cannot be empty!");
+
+                return;
+            }
+
+            if (!mobilePattern.test(mobile)) {
+
+                alert("Mobile number must contain exactly 10 digits!");
+
+                return;
+            }
+
+
+            // EMAIL VALIDATION
+
+            let emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email === "") {
+
+                alert("Email cannot be empty!");
+
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+
+                alert("Please enter a valid email address!");
+
+                return;
+            }
+
+
+            // PASSWORD VALIDATION
+
+            if (password === "") {
+
+                alert("Password cannot be empty!");
+
+                return;
+            }
+
+            if (password.length < 6) {
+
+                alert("Password must contain at least 6 characters!");
+
+                return;
+            }
+
+
+            // RE-ENTER PASSWORD VALIDATION
+
+            if (repassword === "") {
+
+                alert("Please re-enter your password!");
+
+                return;
+            }
+
+            if (password !== repassword) {
+
+                alert("Passwords do not match!");
+
+                return;
+            }
+
+
+            // SUCCESS MESSAGE
+
+            alert("Registration Successful!");
+
+            document.getElementById("registrationForm").reset();
+
+        });
+
+    </script>
+
+</body>
+</html>
