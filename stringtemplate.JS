@@ -110,12 +110,20 @@
 // }
 // console.log(data9.FirstName)
 // console.log(data9.LastName)
-let F="First"
-let L="Last"
-let data9=
-{
-  [F] :"Garima",
-  [L] : "Gupta"  
-}
-
-
+// let F="First"
+// let L="Last"
+// let data9=
+// {
+//   [F] :"Garima",
+//   [L] : "Gupta"  
+// }
+let data2=["Garima","Gupta",101,1209,];
+let namefirst=data2[0];
+let namelast=data2[1];
+let rollno1=data2[2];
+let pinno=data2[3];
+let[namefirst1,namelast1,rollno2,pinno1]=data2;
+console.log(namefirst1);
+console.log(namelast1);
+console.log(rollno2);
+console.log(pinno1);
